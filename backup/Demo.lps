@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="6">
+      <Unit0>
+        <Filename Value="Demo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="242"/>
+        <CursorPos X="41" Y="59"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="matrix.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Matrix"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="6" Y="11"/>
+        <UsageCount Value="200"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="matrixoperations.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="MatrixOperations"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="28"/>
+        <CursorPos X="21" Y="47"/>
+        <FoldState Value=" T3R0A011'"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="svd.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SVD"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="245"/>
+        <CursorPos X="9" Y="275"/>
+        <FoldState Value=" T3V0q2 T6W03N"/>
+        <UsageCount Value="199"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="Matrices.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="155"/>
+        <CursorPos Y="184"/>
+        <UsageCount Value="46"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="/usr/share/fpcsrc/3.0.4/packages/numlib/src/det.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="28"/>
+        <UsageCount Value="7"/>
+      </Unit5>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="svd.pas"/>
+        <Caret Line="272" Column="63" TopLine="250"/>
+      </Position1>
+      <Position2>
+        <Filename Value="svd.pas"/>
+        <Caret Line="260" Column="25" TopLine="250"/>
+      </Position2>
+      <Position3>
+        <Filename Value="svd.pas"/>
+        <Caret Line="239" Column="34" TopLine="217"/>
+      </Position3>
+      <Position4>
+        <Filename Value="svd.pas"/>
+        <Caret Line="271" Column="50" TopLine="250"/>
+      </Position4>
+      <Position5>
+        <Filename Value="svd.pas"/>
+        <Caret Line="254" Column="14" TopLine="223"/>
+      </Position5>
+      <Position6>
+        <Filename Value="svd.pas"/>
+        <Caret Line="274" Column="32" TopLine="251"/>
+      </Position6>
+      <Position7>
+        <Filename Value="svd.pas"/>
+        <Caret Line="277" Column="17" TopLine="244"/>
+      </Position7>
+      <Position8>
+        <Filename Value="svd.pas"/>
+        <Caret Line="274" Column="22" TopLine="227"/>
+      </Position8>
+      <Position9>
+        <Filename Value="svd.pas"/>
+        <Caret Line="262" Column="7" TopLine="248"/>
+      </Position9>
+      <Position10>
+        <Filename Value="svd.pas"/>
+        <Caret Line="243" Column="7" TopLine="231"/>
+      </Position10>
+      <Position11>
+        <Filename Value="svd.pas"/>
+        <Caret Line="245" Column="105" TopLine="222"/>
+      </Position11>
+      <Position12>
+        <Filename Value="svd.pas"/>
+        <Caret Line="209" Column="34" TopLine="190"/>
+      </Position12>
+      <Position13>
+        <Filename Value="svd.pas"/>
+        <Caret Line="280" Column="56" TopLine="257"/>
+      </Position13>
+      <Position14>
+        <Filename Value="svd.pas"/>
+        <Caret Line="248" Column="11" TopLine="228"/>
+      </Position14>
+      <Position15>
+        <Filename Value="svd.pas"/>
+        <Caret Line="250" Column="14" TopLine="219"/>
+      </Position15>
+      <Position16>
+        <Filename Value="svd.pas"/>
+        <Caret Line="231" Column="34" TopLine="213"/>
+      </Position16>
+      <Position17>
+        <Filename Value="svd.pas"/>
+        <Caret Line="244" Column="67" TopLine="213"/>
+      </Position17>
+      <Position18>
+        <Filename Value="svd.pas"/>
+        <Caret Line="249" TopLine="238"/>
+      </Position18>
+      <Position19>
+        <Filename Value="svd.pas"/>
+        <Caret Line="264" Column="11" TopLine="237"/>
+      </Position19>
+      <Position20>
+        <Filename Value="svd.pas"/>
+        <Caret Line="266" Column="11" TopLine="235"/>
+      </Position20>
+      <Position21>
+        <Filename Value="svd.pas"/>
+        <Caret Line="133" Column="111"/>
+      </Position21>
+      <Position22>
+        <Filename Value="svd.pas"/>
+        <Caret Line="7" Column="57"/>
+      </Position22>
+      <Position23>
+        <Filename Value="svd.pas"/>
+        <Caret Line="27" Column="64"/>
+      </Position23>
+      <Position24>
+        <Filename Value="svd.pas"/>
+        <Caret Line="30" Column="79"/>
+      </Position24>
+      <Position25>
+        <Filename Value="Demo.pas"/>
+        <Caret Line="59" Column="41" TopLine="242"/>
+      </Position25>
+      <Position26>
+        <Filename Value="svd.pas"/>
+        <Caret Line="248" Column="7" TopLine="211"/>
+      </Position26>
+      <Position27>
+        <Filename Value="svd.pas"/>
+        <Caret Line="250" Column="15" TopLine="232"/>
+      </Position27>
+      <Position28>
+        <Filename Value="svd.pas"/>
+        <Caret Line="259" TopLine="241"/>
+      </Position28>
+      <Position29>
+        <Filename Value="svd.pas"/>
+        <Caret Line="260" Column="9" TopLine="246"/>
+      </Position29>
+      <Position30>
+        <Filename Value="svd.pas"/>
+        <Caret Line="277" Column="3" TopLine="245"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="project1.lpr"/>
+        <Line Value="1"/>
+      </Item1>
+    </BreakPoints>
+    <Watches Count="17">
+      <Item1>
+        <Expression Value="A"/>
+      </Item1>
+      <Item2>
+        <Expression Value="M"/>
+      </Item2>
+      <Item3>
+        <Expression Value="K"/>
+      </Item3>
+      <Item4>
+        <Expression Value="E"/>
+      </Item4>
+      <Item5>
+        <Expression Value="U"/>
+      </Item5>
+      <Item6>
+        <Expression Value="result"/>
+      </Item6>
+      <Item7>
+        <Expression Value="Answer"/>
+      </Item7>
+      <Item8>
+        <Expression Value="J"/>
+      </Item8>
+      <Item9>
+        <Expression Value="result"/>
+      </Item9>
+      <Item10>
+        <Expression Value="W"/>
+      </Item10>
+      <Item11>
+        <Expression Value="S"/>
+      </Item11>
+      <Item12>
+        <Expression Value="M"/>
+      </Item12>
+      <Item13>
+        <Expression Value="U"/>
+      </Item13>
+      <Item14>
+        <Expression Value="Block"/>
+      </Item14>
+      <Item15>
+        <Expression Value="Tridiagonal"/>
+      </Item15>
+      <Item16>
+        <Expression Value="Tol"/>
+      </Item16>
+      <Item17>
+        <Expression Value="Repeated"/>
+      </Item17>
+    </Watches>
+  </Debugging>
+</CONFIG>
