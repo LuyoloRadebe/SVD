@@ -27,7 +27,14 @@ Result := Eigenvalue(Matrix);
 Result := MatrixSqrt(Result);
 GetTime(chours, cminutes, cseconds, cmilliseconds);
 time_elapsed := ((cmilliseconds-milliseconds) + (cseconds-seconds)*60 + (cminutes-minutes)*3600 + (chours-hours)*216000);
-writeln((time_elapsed / 60):0:3, ' seconds, ',inttostr(time_elapsed), ' milliseconds');
+chours := time_elapsed div 216000;
+time_elapsed := time_elapsed - chours*216000;
+cminutes := time_elapsed div 3600;
+time_elapsed := time_elapsed - cminutes*216000;
+cseconds := time_elapsed div 60;
+time_elapsed := time_elapsed - cseconds*216000;
+cmilliseconds := time_elapsed;
+writeln(cminutes,' minutes, ',cseconds, ' seconds, ',cmilliseconds, ' milliseconds');
 end;
 function TridiagonalHouseholder(Matrix : DynamicMatrix) : DynamicMatrix;
 var
@@ -245,7 +252,7 @@ begin
         FPPrime := FPPrime + 2*(power(Z[I,0],2))/(power((SubEigen[I,I] - OldGuess),3));
         end;
       NewGuess := OldGuess - ((F)/(FPrime));
-      WriteLn('NewGuess := OldGuess - ((F)/(FPrime))', NewGuess,' := ',OldGuess,' - ((',F,',)/(',FPrime,')))');
+      //WriteLn('NewGuess := OldGuess - ((F)/(FPrime))', NewGuess,' := ',OldGuess,' - ((',F,',)/(',FPrime,')))');
       Count := Count + 1;
       Diff := OldGuess-NewGuess;
       if (NewGuess < 0) then
@@ -260,20 +267,22 @@ begin
       begin
       WriteLn('EigenValue #',EigenCount,' = ',NewGuess:0:2,#9,'Number of iterations: ',Count);
       Eigen[EigenCount,EigenCount] := NewGuess;
+      EigenCount := EigenCount +1;
       if (SubEigen[High(Subeigen)-EigenCount,High(Subeigen)-EigenCount]) < 0 then
         begin
         Skip := Skip+1;
         end;
-      EigenCount := EigenCount +1;
+
       end;
+
       if (EigenCount) < High(SubEigen)+1 then
         begin
+        Writeln('Skip',Skip);
         NewGuess := (SubEigen[High(Subeigen)-EigenCount-Skip,High(Subeigen)-EigenCount-Skip]);
         WriteLn('New Guess Reference',NewGuess:0:3,#9,'New Guess',NewGuess + Tol);
         NewGuess := NewGuess + Tol;
         end;
       Flag := 0;
-
       end;
   Result := Eigen;
   WriteLn('Tridiagonal EigenValues');

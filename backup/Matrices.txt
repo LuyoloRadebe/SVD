@@ -181,6 +181,7 @@ M[5,3] := -7;
 M[5,4] := 0;
 M[5,5] := 1;
 
+        J := 0;
     while (J) < (High(SubEigen)+1) do
       begin
       if abs(NewGuess-Eigen[J,J])<(Tol) then

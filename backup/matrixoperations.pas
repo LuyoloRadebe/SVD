@@ -23,6 +23,7 @@ function      MatrixCopy          (MBegin,MEnd,NBegin,NEnd: Integer;Matrix:Dynam
 function      MatrixPaste         (MBegin,NBegin: Integer;Mat1,Mat2:DynamicMatrix):DynamicMatrix;
 function      MatrixConcatenate   (Mat1,Mat2: DynamicMatrix; Mode: Integer):DynamicMatrix;
 function      MatrixIdentity      (Size: Integer):DynamicMatrix;
+function      MatrixLUDecomp      (Matrix:DynamicMatrix):DynamicMatrix;
 function      Factor              (Number: Double):Double;
 implementation
 procedure MatrixPrint(Matrix : DynamicMatrix);
@@ -36,13 +37,13 @@ begin
                WriteLn();
       end;
 end;
-function  Factor(Number: Double):Double;
+function Factor(Number: Double):Double;
 var
 I,J: Double;
 begin
 I := 10;
 J := 1;
-while Number > 0 do
+while Number > 1 do
   begin
   Number := Number / 10;
   J := J*10;
@@ -287,5 +288,44 @@ for I := 0 to Size-1 do
         Identity[I,I] := 1;
     end;
 Result := Identity;
+end;
+function MatrixLUDecomp (Matrix:DynamicMatrix):DynamicMatrix;
+var
+I,J,K : Integer;
+Total : Double;
+U,L : DynamicMatrix;
+begin
+Total := 0;
+SetLength(U,High(Matrix)+1,High(Matrix)+1);
+SetLength(L,High(Matrix)+1,High(Matrix)+1);
+for I:= Low(Matrix) to High(Matrix) do
+    begin
+    for K:= Low(Matrix[0]) to High(Matrix[0]) do
+        begin
+        Total := 0;
+        for J := 0 to I do
+            begin
+            Total := Total + L[I,J]*U[J,K];
+            end;
+        U[I,K] := Matrix[I,K] - Total;
+        end;
+    for K:= Low(Matrix[0]) to High(Matrix[0]) do
+        begin
+        if (I) = (K) then
+           begin
+           L[I][I] := 1;
+           end
+        else
+        begin
+        Total := 0;
+        for J := 0 to I do
+            begin
+            Total := Total + L[K,J]*U[J,I];
+            end;
+        L[K,I] := (Matrix[K,I] - Total)/U[I,I];
+        end;
+    end;
+    end;
+Result := U;
 end;
 end.
