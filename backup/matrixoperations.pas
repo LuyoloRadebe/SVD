@@ -316,16 +316,16 @@ for I:= Low(Matrix) to High(Matrix) do
            L[I][I] := 1;
            end
         else
-        begin
-        Total := 0;
-        for J := 0 to I do
-            begin
-            Total := Total + L[K,J]*U[J,I];
-            end;
-        L[K,I] := (Matrix[K,I] - Total)/U[I,I];
+           begin
+           Total := 0;
+           for J := 0 to I do
+              begin
+              Total := Total + L[K,J]*U[J,I];
+              end;
+           L[K,I] := (Matrix[K,I] - Total)/U[I,I];
+           end;
         end;
     end;
-    end;
-Result := U;
+Result := L;
 end;
 end.

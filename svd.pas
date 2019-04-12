@@ -30,9 +30,9 @@ time_elapsed := ((cmilliseconds-milliseconds) + (cseconds-seconds)*60 + (cminute
 chours := time_elapsed div 216000;
 time_elapsed := time_elapsed - chours*216000;
 cminutes := time_elapsed div 3600;
-time_elapsed := time_elapsed - cminutes*216000;
+time_elapsed := time_elapsed - cminutes*3600;
 cseconds := time_elapsed div 60;
-time_elapsed := time_elapsed - cseconds*216000;
+time_elapsed := time_elapsed - cseconds*60;
 cmilliseconds := time_elapsed;
 writeln(cminutes,' minutes, ',cseconds, ' seconds, ',cmilliseconds, ' milliseconds');
 end;
@@ -272,11 +272,13 @@ begin
         begin
         Skip := Skip+1;
         end;
+
       end;
 
       if (EigenCount) < High(SubEigen)+1 then
         begin
         Writeln('Skip',Skip);
+        Writeln('Flag',Flag);
         NewGuess := (SubEigen[High(Subeigen)-EigenCount-Skip,High(Subeigen)-EigenCount-Skip]);
         WriteLn('New Guess Reference',NewGuess:0:3,#9,'New Guess',NewGuess + Tol);
         NewGuess := NewGuess + Tol;

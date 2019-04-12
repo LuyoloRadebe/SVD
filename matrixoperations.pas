@@ -71,7 +71,7 @@ for I:= Low(Matrix) to High(Matrix) do
     begin
     for J:= Low(Matrix[0]) to High(Matrix[0]) do
         begin
-        Result[I,J] := Constant* Matrix[I,J];
+        Result[I,J] := Matrix[I,J]*Constant;
         end;
     end;
 end;

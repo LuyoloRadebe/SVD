@@ -32,7 +32,7 @@ begin
 //     ReadLn();
 
 
-SetLength(M, 14, 14);
+{SetLength(M, 14, 14);
 M[0,0] := 4;
 M[0,1] := 2;
 M[0,2] := 0;
@@ -229,8 +229,8 @@ M[13,10] := 0;
 M[13,11] := 2;
 M[13,12] := 0;
 M[13,13] := 2;
+}
 
-{
 SetLength(M, 6, 6);
 M[0,0] := 4;
 M[0,1] := 2;
@@ -267,13 +267,13 @@ M[5,1] := 5;
 M[5,2] := 7;
 M[5,3] := -7;
 M[5,4] := 0;
-M[5,5] := 1; }
+M[5,5] := 1;
 
 WriteLn('InputMatrix');
-MatrixPrint(M);
+//MatrixPrint(M);
 ReadLn();
 
-Am := MatrixIdentity(High(M)+1);
+{Am := MatrixIdentity(High(M)+1);
 Am := MatrixMultiplyConst(Am,8.964010707377847);
 WriteLn('Eigenmatrix');
 MatrixPrint(Am);
@@ -285,10 +285,115 @@ MatrixPrint(Am);
 WriteLn('LU Decomp');
 M := MatrixLUDecomp(M);
 MatrixPrint(M);
-ReadLn();
+ReadLn();}
+MatrixPrint(M);
 M := SingularValues(M);
-WriteLn('Singular Values');
+//WriteLn('Singular Values');
 MatrixPrint(M);
 ReadLn();
+
+
+SetLength(M, 6, 6);
+M[0,0] := 4;
+M[0,1] := 2;
+M[0,2] := 0;
+M[0,3] := 1;
+M[0,4] := 8;
+M[0,5] := 9;
+M[1,0] := 2;
+M[1,1] := 3;
+M[1,2] := -1;
+M[1,3] := 6;
+M[1,4] := 3;
+M[1,5] := 5;
+M[2,0] := 0;
+M[2,1] := -1;
+M[2,2] := 9;
+M[2,3] := 0;
+M[2,4] := 11;
+M[2,5] := 7;
+M[3,0] := 1;
+M[3,1] := 6;
+M[3,2] := 0;
+M[3,3] := 1;
+M[3,4] := 12;
+M[3,5] := -7;
+M[4,0] := 8;
+M[4,1] := 3;
+M[4,2] := 11;
+M[4,3] := 12;
+M[4,4] := 6;
+M[4,5] := 0;
+M[5,0] := 9;
+M[5,1] := 5;
+M[5,2] := 7;
+M[5,3] := -7;
+M[5,4] := 0;
+M[5,5] := 1;
+
+{Setlength(M,2,2);
+M[0,0] := 5;
+M[0,1] := -2;
+M[1,0] := -2;
+M[1,1] := 8;}
+Setlength(Am, 2,1);
+Am[0,0] := 1;
+Am[1,0] := 1;
+
+//Bm := MatrixIdentity(High(M)+1);
+//Bm := MatrixMultiplyConst(Am,9);
+//WriteLn('Eigenmatrix');
+//MatrixPrint(Am);
+//M := MatrixSubtract(M,Bm);
+
+MatrixPrint(M);
+
+Eigen := Singularvalues(M);
+
+writeln('eigenvalues');
+matrixprint(Eigen);
+
+count := 0;
+I := 0;
+while (I < 20) do
+begin
+     Setlength(Am, 6,1);
+Am[0,0] := 1;
+Am[1,0] := 1;
+Am[2,0] := 1;
+Am[3,0] := 1;
+Am[4,0] := 1;
+Am[5,0] := 1;
+
+     while ( I < 200) do
+     begin
+          Am := MatrixMultiply(M, Am);
+          Bm := Am;
+          AnswerDouble := 1/Am[high(Am),0];
+          //writeln('answerdouble',answerdouble);
+          Am := MatrixMultiplyConst(Am, AnswerDouble);
+          count := count +1;
+     end;
+     writeln('scaled');
+     MatrixPrint(Bm);
+     writeln('multiple');
+     MatrixPrint(Am);
+     count := 0;
+     AnswerDouble := 1/MatrixNorm(Bm);
+     writeln('Norm',1/AnswerDouble);
+     Bm := MatrixMultiplyConst(Bm,AnswerDouble);
+     Am := MatrixTranspose(Am);
+     Am := MatrixMultiply(Bm,Am);
+     Am := MatrixMultiplyConst(Am,25.948283413374774);
+     M := MatrixSubtract(M,Am);
+     writeln('vector');
+     matrixprint(bm);
+     readln();
+end;
+
+Am := MatrixSubtract(M,Am);
+WriteLn('Input - Eigenmatrix');
+MatrixPrint(Am);
+
 end.
 
